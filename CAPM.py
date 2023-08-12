@@ -107,6 +107,7 @@ class PortfolioAnalysis:
         # logreturns without composition
         logreturnsUtenInnhold = logreturns.drop("innhold", axis=1)
 
+        # concat the rows from summed log returns, which is in arithmetic numbers to the portfolio without logreturns
         rows_to_concat = []
         for index, row in logreturnsUtenInnhold.iterrows():
             if index in df.index:
